@@ -7,7 +7,7 @@ const gravatar = require("gravatar");
 const { normalize } = require("path/posix");
 
 exports.register = async (req, res) => {
-  const { firstName, lastName, email, phone, password, role, avatar } =
+  const { firstName, lastName, email, phone, password,userRole , avatar } =
     req.body;
   try {
     //creat a new user
@@ -17,7 +17,7 @@ exports.register = async (req, res) => {
       email,
       password,
       phone,
-      role,
+      userRole,
     });
     //check if the User do  exiest
 

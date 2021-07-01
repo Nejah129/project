@@ -14,6 +14,7 @@
     "axios": "^0.21.1",
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
+    "bootstrap": "^5.0.2",
     "config": "^3.3.6",
     "express": "^4.17.1",
     "express-validator": "^6.11.1",
@@ -23,6 +24,8 @@
     "mongoose-role": "^3.0.5",
     "node": "^16.1.0",
     "nodemon": "^2.0.7",
+    "react-bootstrap": "^1.6.1",
+    "react-modal": "^3.14.3",
     "react-router-dom": "^5.2.0",
     "redux": "^4.1.0",
     "thunk": "0.0.1"

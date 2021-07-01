@@ -17,7 +17,7 @@ const isAuth=async(req,res,next)=>{
         }
         
     } catch (error) {
-        res.send(errors,error.message)
+        res.send(error.message)
     }
 }
 module.exports =isAuth;
