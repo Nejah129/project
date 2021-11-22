@@ -21,17 +21,17 @@ Modal.setAppElement("#root");
 const ProductsDiscription = ({match }) => {
   const {loading,products}= useSelector(state => state.productReducer);
    
-  console.log("match",match)
-  const productId = match.params._id;
-  const product = products.find((product) => product.id ===  match.params._id);
-const dispatch = useDispatch()
-useEffect(() => {
-  dispatch(getProductWithID())
-}, [])
+  
+  const productId = match.params.id;
+  const product = products.find((product) => product._id ===  productId);
+// const dispatch = useDispatch()
+// useEffect(() => {
+//   dispatch(getProductWithID())
+// }, [])
 
   console.log("product",product)
   console.log("productId",productId)
-  
+  console.log("match",match)
   const [modalIsOpen, setIsOpen] = useState(false);
   function openModal() {
     setIsOpen(true);
@@ -85,7 +85,8 @@ useEffect(() => {
         <form onSubmit={(e) => {
             e.preventDefault();closeModal()}}>
               <h1>{product.name}</h1>
-              <h2>Price :{product.price}</h2>
+              <h4>Quantity:{product.price}</h4>
+              <h2>Price :{product.price*product.quantity}</h2>
               <button>Add to Busket</button>
               <button onClick={closeModal}>Cancel</button>
             </form>

@@ -1,14 +1,16 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const user=require('./routes/user')
 const conectDB=require('./config/ConectDb')
 const product=require('./routes/product');
 const cart = require('./routes/cart');
 
 
+
 const app=express();
 app.use(express.json());
 
-
+app.use(bodyParser.json())
 app.use('/user',user);
 app.use('/product',product);
 app.use('/cart',cart);
